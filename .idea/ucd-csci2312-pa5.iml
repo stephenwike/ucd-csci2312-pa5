@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Advantage.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Advantage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Agent.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Agent.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AggressiveAgentStrategy.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/AggressiveAgentStrategy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DefaultAgentStrategy.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DefaultAgentStrategy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ErrorContext.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ErrorContext.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exceptions.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exceptions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Food.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Food.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Game.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gaming.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gaming.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GamingTests.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GamingTests.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Piece.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Piece.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Resource.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Resource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Simple.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Simple.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strategic.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strategic.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strategy.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include/c++" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include/ssp" />
+          <root url="file://C:/cygwin64/usr/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include-fixed" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include/c++" />
+          <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/4.9.3/include/ssp" />
+          <root url="file://C:/cygwin64/usr/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
