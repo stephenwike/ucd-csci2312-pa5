@@ -6,6 +6,7 @@
 #include "Gaming.h"
 #include "Agent.h"
 #include "Resource.h"
+#include "Advantage.h"
 
 const double Gaming::Resource::RESOURCE_SPOIL_FACTOR = 1.2;
 
@@ -18,11 +19,10 @@ Gaming::Resource::~Resource() {
 }
 
 double Gaming::Resource::consume() {
-    return 0;    //TODO - Implement this
+    return 0;
 }
 
 void Gaming::Resource::age() {
-    //__capacity /= RESOURCE_SPOIL_FACTOR;
     __capacity = (int)__capacity / RESOURCE_SPOIL_FACTOR;
     if(!isViable()){
         finish();
@@ -34,13 +34,19 @@ Gaming::ActionType Gaming::Resource::takeTurn(const Gaming::Surroundings &s) con
 }
 
 Gaming::Piece &Gaming::Resource::operator*(Gaming::Piece &other) {
-    return other.interact(this);    //TODO - Implement this
+    return other.interact(this);
 }
 
 Gaming::Piece &Gaming::Resource::interact(Gaming::Agent *agent) {
-    return *this;    //TODO - Implement this
+    if(getType() == FOOD){
+        agent->addEnergy(__capacity);
+    }if(getType() == ADVANTAGE){
+        agent->addEnergy(__capacity * Advantage::ADVANTAGE_MULT_FACTOR);
+    }
+    finish();
+    return *this;
 }
 
 Gaming::Piece &Gaming::Resource::interact(Gaming::Resource *resource) {
-    return *this;    //TODO - Implement this
+    return *this;
 }

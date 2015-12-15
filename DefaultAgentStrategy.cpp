@@ -6,8 +6,8 @@
 #include "DefaultAgentStrategy.h"
 #include "Game.h"
 
-Gaming::DefaultAgentStrategy::DefaultAgentStrategy() : Strategy() {
-    //TODO - Implement this
+Gaming::DefaultAgentStrategy::DefaultAgentStrategy() : Strategy()
+{
 }
 
 Gaming::DefaultAgentStrategy::~DefaultAgentStrategy() {
@@ -48,24 +48,23 @@ Gaming::ActionType Gaming::DefaultAgentStrategy::operator()(const Gaming::Surrou
         }
     }
 
-    std::cout << "DAS: FINAL ACT: " << act << " :: ";
     switch(act){
         case 0:
             return NW;
         case 1:
-            return W;
-        case 2:
-            return SW;
-        case 3:
             return N;
+        case 2:
+            return NE;
+        case 3:
+            return W;
         case 4:
             return STAY;
         case 5:
-            return S;
-        case 6:
-            return NE;
-        case 7:
             return E;
+        case 6:
+            return SW;
+        case 7:
+            return S;
         case 8:
             return SE;
         default:

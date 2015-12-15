@@ -20,9 +20,9 @@ void Gaming::Advantage::print(std::ostream &os) const {
 }
 
 double Gaming::Advantage::getCapacity() const {
-    return Resource::getCapacity();    //TODO - Implement this
+    return Resource::getCapacity();
 }
 
 double Gaming::Advantage::consume() {
-    return Resource::consume();    //TODO - Implement this
+    return Resource::consume();
 }

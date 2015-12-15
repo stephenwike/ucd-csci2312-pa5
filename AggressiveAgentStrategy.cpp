@@ -50,24 +50,23 @@ Gaming::ActionType Gaming::AggressiveAgentStrategy::operator()(const Gaming::Sur
         }
     }
 
-    std::cout << "AAS: FINAL ACT: " << act << " :: ";
     switch(act){
         case 0:
             return NW;
         case 1:
-            return W;
-        case 2:
-            return SW;
-        case 3:
             return N;
+        case 2:
+            return NE;
+        case 3:
+            return W;
         case 4:
             return STAY;
         case 5:
-            return S;
-        case 6:
-            return NE;
-        case 7:
             return E;
+        case 6:
+            return SW;
+        case 7:
+            return S;
         case 8:
             return SE;
         default:

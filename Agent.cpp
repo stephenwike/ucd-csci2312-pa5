@@ -29,9 +29,20 @@ Gaming::Piece &Gaming::Agent::operator*(Gaming::Piece &other) {
 }
 
 Gaming::Piece &Gaming::Agent::interact(Gaming::Agent *agent) {
+    if(__energy == agent->__energy){
+        finish(); agent->finish();
+    }else if(__energy < agent->__energy){
+        agent->__energy -= __energy;
+        finish();
+    }
+    else{
+        __energy -= agent->__energy;
+        agent->finish();
+    }
     return *this;
 }
 
 Gaming::Piece &Gaming::Agent::interact(Gaming::Resource *resource) {
+    //What goes here?  //TODO: Maybe implement this?
     return *this;
 }

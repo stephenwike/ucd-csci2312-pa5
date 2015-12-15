@@ -10,15 +10,9 @@ Gaming::Piece::Piece(const Gaming::Game &g, const Gaming::Position &p) : __finis
 {
 }
 
-void Gaming::Piece::print(std::ostream &os) const {
-    os << "[...]";
-    std::cout << "[cout]";
-    //TODO - Implement this
-}
-
 Gaming::Piece::~Piece() {
     __idGen--;
-    //TODO - Implement this
+    //delete[] __grid;
 }
 
 Gaming::PieceType getType() { return Gaming::PieceType::EMPTY; }

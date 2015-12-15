@@ -16,7 +16,6 @@ Gaming::Food::~Food() {
 }
 
 void Gaming::Food::print(std::ostream &os) const {
-    //std::cout << FOOD_ID;
     os << FOOD_ID;
     //TODO - Implement this
 }

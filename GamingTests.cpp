@@ -1079,6 +1079,7 @@ void test_game_print(ErrorContext &ec, unsigned int numRuns) {
                 std::regex re1("(\\[([[:alpha:]]{1}[[:d:]]{1,4}[ ]?|[ ]{5})\\]){3}");
                 std::regex_search(line, m, re1);
                 pass = pass && (m.size() == 3);
+
 //                if (! pass) {
 //                    std::cout << m[0] << ' ' << m[1] << ' ' << m.size() << std::endl;
 //                }

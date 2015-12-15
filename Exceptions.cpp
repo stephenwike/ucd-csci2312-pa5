@@ -5,10 +5,10 @@
 #include "Exceptions.h"
 
 void Gaming::GamingException::setName(std::string name) {
-    std::cout << "ERROR: " << name << ": Something went wrong.  Elaboration needed!" << std::endl;
+    __name = name;
 }
 
-Gaming::DimensionEx::DimensionEx(unsigned expWidth, unsigned expHeight, unsigned width, unsigned height) : __exp_width(expWidth), __exp_height(expHeight), __width(width), __height(height)
+Gaming::DimensionEx::DimensionEx(unsigned expWidth, unsigned expHeight, unsigned width, unsigned height) : GamingException(), __exp_width(expWidth), __exp_height(expHeight), __width(width), __height(height)
 {
 }
 
@@ -30,10 +30,10 @@ unsigned Gaming::DimensionEx::getHeight() const {
 
 Gaming::InsufficientDimensionsEx::InsufficientDimensionsEx(unsigned minWidth, unsigned minHeight, unsigned width, unsigned height) : DimensionEx(minWidth,minHeight,width,height)
 {
+    setName("InsufficientDimensionsEx");
 }
 
 void Gaming::InsufficientDimensionsEx::__print_args(std::ostream &os) const {
-    //TODO - Implement this
 }
 
 void Gaming::OutOfBoundsEx::__print_args(std::ostream &os) const {
@@ -42,6 +42,7 @@ void Gaming::OutOfBoundsEx::__print_args(std::ostream &os) const {
 
 Gaming::OutOfBoundsEx::OutOfBoundsEx(unsigned maxWidth, unsigned maxHeight, unsigned width, unsigned height) : DimensionEx(maxWidth,maxHeight,width,height)
 {
+    setName("OutOfBoundsEx");
 }
 
 namespace Gaming {
