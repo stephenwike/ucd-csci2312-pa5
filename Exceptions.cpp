@@ -34,10 +34,11 @@ Gaming::InsufficientDimensionsEx::InsufficientDimensionsEx(unsigned minWidth, un
 }
 
 void Gaming::InsufficientDimensionsEx::__print_args(std::ostream &os) const {
+    os << "Minimum Height: " << __exp_height << ", Minimum Width: " << __exp_width << ", Current Height: " << __height << ", Current Width: " << __width;
 }
 
 void Gaming::OutOfBoundsEx::__print_args(std::ostream &os) const {
-    //TODO - Implement this
+    os << "Maximum Height: " << __exp_height << ", Maximum Width: " << __exp_width << ", Current Height: " << __height << ", Current Width: " << __width;
 }
 
 Gaming::OutOfBoundsEx::OutOfBoundsEx(unsigned maxWidth, unsigned maxHeight, unsigned width, unsigned height) : DimensionEx(maxWidth,maxHeight,width,height)
@@ -47,6 +48,8 @@ Gaming::OutOfBoundsEx::OutOfBoundsEx(unsigned maxWidth, unsigned maxHeight, unsi
 
 namespace Gaming {
     std::ostream &operator<<(std::ostream &os, const GamingException &ex) {
+        os << ex.__name << ": ";
+        ex.__print_args(os);
         return os;
     }
 }

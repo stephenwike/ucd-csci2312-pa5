@@ -99,7 +99,11 @@ Gaming::Game::Game(const Gaming::Game &another) {
 }
 
 Gaming::Game::~Game() {
-    //TODO - Implement this
+    for(std::size_t i = 0; i < __width*__height; i++){
+        if(__grid[i] != nullptr){
+            delete __grid[i];
+        }
+    }
 }
 
 unsigned int Gaming::Game::getNumPieces() const {
@@ -277,11 +281,6 @@ const Gaming::Surroundings Gaming::Game::getSurroundings(const Gaming::Position 
             posCount++;
         }
     }
-
-//    for(std::size_t i = 0; i < 9; i++){
-//        std::cout << "-" << s.array[i];
-//    }
-//    std::cout << "- : ";
     return s;
 }
 
@@ -382,7 +381,6 @@ const Gaming::Position Gaming::Game::move(const Gaming::Position &pos, const Gam
         }
     }
     p.x = pos.x + x; p.y = pos.y + y;
-
     return p;
 }
 
@@ -395,7 +393,7 @@ void Gaming::Game::round() {
                         __grid[i * __width + j]->setTurned(true);
                         Position pos(i, j);
                         Surroundings surr = getSurroundings(pos);
-                        std::cout << "- ";
+                        //std::cout << "- ";
                         Position newPos = move(__grid[i * __width + j]->getPosition(), __grid[i * __width + j]->takeTurn(surr));
                         if(pos.x != newPos.x || newPos.y != pos.y) {
                             Piece *s1 = __grid[i * __width + j], *s2 = __grid[newPos.x * __width + newPos.y];
@@ -444,14 +442,13 @@ void Gaming::Game::round() {
     if(getNumResources() == 0){
         __status = OVER;
     }
-    //TODO - Implement this
 }
 
 void Gaming::Game::play(bool verbose) {
     __status = PLAYING;
 
     while(__status != OVER) {
-        if(!__verbose){
+        if(__verbose){
             std::cout << *this;
         }
         round();

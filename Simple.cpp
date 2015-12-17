@@ -12,7 +12,6 @@ Gaming::Simple::Simple(const Gaming::Game &g, const Gaming::Position &p, double 
 }
 
 Gaming::Simple::~Simple() {
-    //TODO - Implement this
 }
 
 void Gaming::Simple::print(std::ostream &os) const {
@@ -33,7 +32,6 @@ Gaming::ActionType Gaming::Simple::takeTurn(const Gaming::Surroundings &s) const
         }
     }
 
-    //std::cout << "SIMPLE: FINAL ACT: " << act << " :: ";
     switch(act){
         case 0:
             return NW;

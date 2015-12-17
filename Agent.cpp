@@ -43,6 +43,5 @@ Gaming::Piece &Gaming::Agent::interact(Gaming::Agent *agent) {
 }
 
 Gaming::Piece &Gaming::Agent::interact(Gaming::Resource *resource) {
-    //What goes here?  //TODO: Maybe implement this?
     return *this;
 }

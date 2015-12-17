@@ -15,7 +15,6 @@ Gaming::Resource::Resource(const Gaming::Game &g, const Gaming::Position &p, dou
 }
 
 Gaming::Resource::~Resource() {
-    //TODO - Implement this
 }
 
 double Gaming::Resource::consume() {

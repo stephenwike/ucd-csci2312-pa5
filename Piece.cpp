@@ -11,8 +11,7 @@ Gaming::Piece::Piece(const Gaming::Game &g, const Gaming::Position &p) : __finis
 }
 
 Gaming::Piece::~Piece() {
-    __idGen--;
-    //delete[] __grid;
+    //__idGen--;
 }
 
 Gaming::PieceType getType() { return Gaming::PieceType::EMPTY; }
